@@ -9,12 +9,12 @@ jobs:
         steps:
             - name: Show OS
               run: |
-                "This jon is running on an Ubuntu runner"
+                 echo "This jon is running on an Ubuntu runner"
                  echo "The runner is $RUNNER_OS" 
     windows-echo:
-        runs-on: windows-lates
+        runs-on: windows-latest
         steps:
             - name: Show OS
               run: |
-                "This job is running on a Windows runner"
+                echo "This job is running on a Windows runner"
                 echo "The runner is $RUNNER_OS"
