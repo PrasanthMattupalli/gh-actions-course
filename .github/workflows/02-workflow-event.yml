@@ -1,0 +1,15 @@
+name: 02-work-flow-events
+on:
+    push:
+    pull_request:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 0 * * *'
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Show the Trigger"
+              run: |
+                echo "Event name: ${{ github.event_name }}"
